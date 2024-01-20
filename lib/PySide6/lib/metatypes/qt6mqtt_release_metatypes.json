@@ -1,0 +1,1156 @@
+[
+    {
+        "classes": [
+            {
+                "className": "QMqttClient",
+                "enums": [
+                    {
+                        "isClass": false,
+                        "isFlag": false,
+                        "name": "ClientState",
+                        "values": [
+                            "Disconnected",
+                            "Connecting",
+                            "Connected"
+                        ]
+                    },
+                    {
+                        "isClass": false,
+                        "isFlag": false,
+                        "name": "ClientError",
+                        "values": [
+                            "NoError",
+                            "InvalidProtocolVersion",
+                            "IdRejected",
+                            "ServerUnavailable",
+                            "BadUsernameOrPassword",
+                            "NotAuthorized",
+                            "TransportInvalid",
+                            "ProtocolViolation",
+                            "UnknownError",
+                            "Mqtt5SpecificError"
+                        ]
+                    },
+                    {
+                        "isClass": false,
+                        "isFlag": false,
+                        "name": "ProtocolVersion",
+                        "values": [
+                            "MQTT_3_1",
+                            "MQTT_3_1_1",
+                            "MQTT_5_0"
+                        ]
+                    }
+                ],
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "topic",
+                                "type": "QMqttTopicName"
+                            },
+                            {
+                                "name": "message",
+                                "type": "QByteArray"
+                            },
+                            {
+                                "name": "qos",
+                                "type": "quint8"
+                            },
+                            {
+                                "name": "retain",
+                                "type": "bool"
+                            }
+                        ],
+                        "name": "publish",
+                        "returnType": "qint32"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "topic",
+                                "type": "QMqttTopicName"
+                            },
+                            {
+                                "name": "message",
+                                "type": "QByteArray"
+                            },
+                            {
+                                "name": "qos",
+                                "type": "quint8"
+                            }
+                        ],
+                        "name": "publish",
+                        "returnType": "qint32"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "topic",
+                                "type": "QMqttTopicName"
+                            },
+                            {
+                                "name": "message",
+                                "type": "QByteArray"
+                            }
+                        ],
+                        "name": "publish",
+                        "returnType": "qint32"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "topic",
+                                "type": "QMqttTopicName"
+                            }
+                        ],
+                        "name": "publish",
+                        "returnType": "qint32"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "topic",
+                                "type": "QMqttTopicName"
+                            },
+                            {
+                                "name": "properties",
+                                "type": "QMqttPublishProperties"
+                            },
+                            {
+                                "name": "message",
+                                "type": "QByteArray"
+                            },
+                            {
+                                "name": "qos",
+                                "type": "quint8"
+                            },
+                            {
+                                "name": "retain",
+                                "type": "bool"
+                            }
+                        ],
+                        "name": "publish",
+                        "returnType": "qint32"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "topic",
+                                "type": "QMqttTopicName"
+                            },
+                            {
+                                "name": "properties",
+                                "type": "QMqttPublishProperties"
+                            },
+                            {
+                                "name": "message",
+                                "type": "QByteArray"
+                            },
+                            {
+                                "name": "qos",
+                                "type": "quint8"
+                            }
+                        ],
+                        "name": "publish",
+                        "returnType": "qint32"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "topic",
+                                "type": "QMqttTopicName"
+                            },
+                            {
+                                "name": "properties",
+                                "type": "QMqttPublishProperties"
+                            },
+                            {
+                                "name": "message",
+                                "type": "QByteArray"
+                            }
+                        ],
+                        "name": "publish",
+                        "returnType": "qint32"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "topic",
+                                "type": "QMqttTopicName"
+                            },
+                            {
+                                "name": "properties",
+                                "type": "QMqttPublishProperties"
+                            }
+                        ],
+                        "name": "publish",
+                        "returnType": "qint32"
+                    },
+                    {
+                        "access": "public",
+                        "name": "connectToHost",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "disconnectFromHost",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "clientId",
+                        "notify": "clientIdChanged",
+                        "read": "clientId",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setClientId"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "hostname",
+                        "notify": "hostnameChanged",
+                        "read": "hostname",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setHostname"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "port",
+                        "notify": "portChanged",
+                        "read": "port",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "quint16",
+                        "user": false,
+                        "write": "setPort"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "keepAlive",
+                        "notify": "keepAliveChanged",
+                        "read": "keepAlive",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "quint16",
+                        "user": false,
+                        "write": "setKeepAlive"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "protocolVersion",
+                        "notify": "protocolVersionChanged",
+                        "read": "protocolVersion",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "ProtocolVersion",
+                        "user": false,
+                        "write": "setProtocolVersion"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "state",
+                        "notify": "stateChanged",
+                        "read": "state",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "ClientState",
+                        "user": false,
+                        "write": "setState"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 6,
+                        "name": "error",
+                        "notify": "errorChanged",
+                        "read": "error",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "ClientError",
+                        "user": false,
+                        "write": "setError"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 7,
+                        "name": "username",
+                        "notify": "usernameChanged",
+                        "read": "username",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setUsername"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 8,
+                        "name": "password",
+                        "notify": "passwordChanged",
+                        "read": "password",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setPassword"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 9,
+                        "name": "cleanSession",
+                        "notify": "cleanSessionChanged",
+                        "read": "cleanSession",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false,
+                        "write": "setCleanSession"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 10,
+                        "name": "willTopic",
+                        "notify": "willTopicChanged",
+                        "read": "willTopic",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setWillTopic"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 11,
+                        "name": "willMessage",
+                        "notify": "willMessageChanged",
+                        "read": "willMessage",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QByteArray",
+                        "user": false,
+                        "write": "setWillMessage"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 12,
+                        "name": "willQoS",
+                        "notify": "willQoSChanged",
+                        "read": "willQoS",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "quint8",
+                        "user": false,
+                        "write": "setWillQoS"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 13,
+                        "name": "willRetain",
+                        "notify": "willRetainChanged",
+                        "read": "willRetain",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false,
+                        "write": "setWillRetain"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 14,
+                        "name": "autoKeepAlive",
+                        "notify": "autoKeepAliveChanged",
+                        "read": "autoKeepAlive",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false,
+                        "write": "setAutoKeepAlive"
+                    }
+                ],
+                "qualifiedClassName": "QMqttClient",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "connected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "disconnected",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QByteArray"
+                            },
+                            {
+                                "name": "topic",
+                                "type": "QMqttTopicName"
+                            }
+                        ],
+                        "name": "messageReceived",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "message",
+                                "type": "QByteArray"
+                            }
+                        ],
+                        "name": "messageReceived",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "qint32"
+                            },
+                            {
+                                "name": "s",
+                                "type": "QMqtt::MessageStatus"
+                            },
+                            {
+                                "name": "properties",
+                                "type": "QMqttMessageStatusProperties"
+                            }
+                        ],
+                        "name": "messageStatusChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "id",
+                                "type": "qint32"
+                            }
+                        ],
+                        "name": "messageSent",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "pingResponseReceived",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "brokerSessionRestored",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "hostname",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "hostnameChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "port",
+                                "type": "quint16"
+                            }
+                        ],
+                        "name": "portChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "clientId",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "clientIdChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "keepAlive",
+                                "type": "quint16"
+                            }
+                        ],
+                        "name": "keepAliveChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "protocolVersion",
+                                "type": "ProtocolVersion"
+                            }
+                        ],
+                        "name": "protocolVersionChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "state",
+                                "type": "ClientState"
+                            }
+                        ],
+                        "name": "stateChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "error",
+                                "type": "ClientError"
+                            }
+                        ],
+                        "name": "errorChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "username",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "usernameChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "password",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "passwordChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "cleanSession",
+                                "type": "bool"
+                            }
+                        ],
+                        "name": "cleanSessionChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "willTopic",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "willTopicChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "willQoS",
+                                "type": "quint8"
+                            }
+                        ],
+                        "name": "willQoSChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "willMessage",
+                                "type": "QByteArray"
+                            }
+                        ],
+                        "name": "willMessageChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "willRetain",
+                                "type": "bool"
+                            }
+                        ],
+                        "name": "willRetainChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "autoKeepAlive",
+                                "type": "bool"
+                            }
+                        ],
+                        "name": "autoKeepAliveChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "p",
+                                "type": "QMqttAuthenticationProperties"
+                            }
+                        ],
+                        "name": "authenticationRequested",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "p",
+                                "type": "QMqttAuthenticationProperties"
+                            }
+                        ],
+                        "name": "authenticationFinished",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "hostname",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "setHostname",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "port",
+                                "type": "quint16"
+                            }
+                        ],
+                        "name": "setPort",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "clientId",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "setClientId",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "keepAlive",
+                                "type": "quint16"
+                            }
+                        ],
+                        "name": "setKeepAlive",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "protocolVersion",
+                                "type": "ProtocolVersion"
+                            }
+                        ],
+                        "name": "setProtocolVersion",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "state",
+                                "type": "ClientState"
+                            }
+                        ],
+                        "name": "setState",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "error",
+                                "type": "ClientError"
+                            }
+                        ],
+                        "name": "setError",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "username",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "setUsername",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "password",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "setPassword",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "cleanSession",
+                                "type": "bool"
+                            }
+                        ],
+                        "name": "setCleanSession",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "willTopic",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "setWillTopic",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "willQoS",
+                                "type": "quint8"
+                            }
+                        ],
+                        "name": "setWillQoS",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "willMessage",
+                                "type": "QByteArray"
+                            }
+                        ],
+                        "name": "setWillMessage",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "willRetain",
+                                "type": "bool"
+                            }
+                        ],
+                        "name": "setWillRetain",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "autoKeepAlive",
+                                "type": "bool"
+                            }
+                        ],
+                        "name": "setAutoKeepAlive",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "qmqttclient.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "QMqttConnection",
+                "object": true,
+                "qualifiedClassName": "QMqttConnection",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "qmqttconnection_p.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "QMqttMessage",
+                "gadget": true,
+                "properties": [
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "topic",
+                        "read": "topic",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QMqttTopicName",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "payload",
+                        "read": "payload",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QByteArray",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "id",
+                        "read": "id",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "quint16",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "qos",
+                        "read": "qos",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "quint8",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "duplicate",
+                        "read": "duplicate",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "retain",
+                        "read": "retain",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "QMqttMessage"
+            }
+        ],
+        "inputFile": "qmqttmessage.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "QMqttSubscription",
+                "enums": [
+                    {
+                        "isClass": false,
+                        "isFlag": false,
+                        "name": "SubscriptionState",
+                        "values": [
+                            "Unsubscribed",
+                            "SubscriptionPending",
+                            "Subscribed",
+                            "UnsubscriptionPending",
+                            "Error"
+                        ]
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "state",
+                        "notify": "stateChanged",
+                        "read": "state",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "SubscriptionState",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "qos",
+                        "notify": "qosChanged",
+                        "read": "qos",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "quint8",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "topic",
+                        "read": "topic",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QMqttTopicFilter",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "reason",
+                        "read": "reason",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "reasonCode",
+                        "read": "reasonCode",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QMqtt::ReasonCode",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "sharedSubscription",
+                        "read": "isSharedSubscription",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 6,
+                        "name": "sharedSubscriptionName",
+                        "read": "sharedSubscriptionName",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "QMqttSubscription",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "state",
+                                "type": "SubscriptionState"
+                            }
+                        ],
+                        "name": "stateChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "quint8"
+                            }
+                        ],
+                        "name": "qosChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "msg",
+                                "type": "QMqttMessage"
+                            }
+                        ],
+                        "name": "messageReceived",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "name": "unsubscribe",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "qmqttsubscription.h",
+        "outputRevision": 68
+    }
+]

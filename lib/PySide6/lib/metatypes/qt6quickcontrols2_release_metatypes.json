@@ -1,0 +1,19 @@
+[
+    {
+        "classes": [
+            {
+                "className": "QQuickStylePlugin",
+                "object": true,
+                "qualifiedClassName": "QQuickStylePlugin",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QQmlExtensionPlugin"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "qquickstyleplugin_p.h",
+        "outputRevision": 68
+    }
+]
